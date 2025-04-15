@@ -1,12 +1,41 @@
-# React + Vite
+# 🌐 Code Support - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page criada com **React + Vite** para divulgar o **[BOT] Code Support**, nosso bot premium com funções exclusivas, personalização completa e muito mais para seu servidor Discord.
 
-Currently, two official plugins are available:
+## 🧠 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta aplicação tem como objetivo apresentar de forma clara, direta e visualmente atraente todos os recursos e vantagens do nosso bot. A landing page foi construída com foco em performance, responsividade e facilidade de manutenção.
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades da Página
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Apresentação visual do bot
+- Destaques dos recursos premium:
+  - Personalização de avatar, nome e banner
+  - Criação de comandos/funções exclusivas
+  - Sistema de logs avançado
+  - Configurações dinâmicas via comandos
+- Integração com redes sociais e canais de contato
+- Responsiva para mobile e desktop
+- Links diretos para adicionar o bot, entrar no servidor de suporte e YouTube
+
+## 🛠️ Tecnologias Utilizadas
+
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- Hospedagem: [Vercel](https://vercel.com/)
+
+## 📦 Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Acesse a pasta do projeto
+cd landpage-cs
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
