@@ -1,8 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Importar os hooks necessários
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
+import { Wallet } from "@mercadopago/sdk-react";
 
 export default function Header() {
+  useEffect(() => {
+    const loadMercadoPago = async () => {
+      const script = document.createElement("script");
+      script.src = "https://sdk.mercadopago.com/js/v2";
+      script.onload = async () => {
+        const mp = new window.MercadoPago(
+          "APP_USR-2e17a37f-e06e-4511-aa5d-11e411b93d50"
+        );
+
+        const res = await fetch("http://localhost:3000/preference");
+        const data = await res.json();
+
+        mp.checkout({
+          preference: {
+            id: data.id,
+          },
+          render: {
+            container: "#wallet_container",
+            label: "Pagar com Mercado Pago",
+          },
+        });
+      };
+      document.body.appendChild(script);
+    };
+
+    loadMercadoPago();
+  }, []);
   return (
     <>
       {/* Navbar fora do grid */}
@@ -69,9 +97,7 @@ export default function Header() {
             <p className="lead">
               Criamos experiências digitais que geram resultados.
             </p>
-            <a href="#cta" className="btn btn-lg btn-primary mt-3">
-              Comprar agora
-            </a>
+            <div id="wallet_container"></div>
           </Col>
         </Row>
       </Container>

@@ -4,6 +4,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const FeedbackList = () => {
   const feedbacks = [
     {
+      nome: "eae.karoll",
+      profissao: "Feedback Discord",
+      mensagem:
+        "Demoramos porque sou indecisa, mas ficou perfeito e eu recomendo muito 👍❤",
+      avaliacao: 5,
+      imagem:
+        "https://cdn.discordapp.com/avatars/1023579467525914654/053b6871bdc9c855e345c15d6ab9118c.png?size=2048",
+    },
+    {
       nome: "Sombra",
       profissao: "Feedback Discord",
       mensagem:
@@ -19,15 +28,6 @@ const FeedbackList = () => {
       avaliacao: 5,
       imagem:
         "https://cdn.discordapp.com/avatars/610681582671495189/53c3b2e0dbd853593d3b5c83c3365739.png?size=2048",
-    },
-    {
-      nome: "eae.karoll",
-      profissao: "Feedback Discord",
-      mensagem:
-        "Demoramos porque sou indecisa, mas ficou perfeito e eu recomendo muito 👍❤",
-      avaliacao: 5,
-      imagem:
-        "https://cdn.discordapp.com/avatars/1023579467525914654/053b6871bdc9c855e345c15d6ab9118c.png?size=2048",
     },
     {
       nome: "Migas btw",
