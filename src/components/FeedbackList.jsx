@@ -60,73 +60,59 @@ const FeedbackList = () => {
   return (
     <div className="container my-5">
       <h2 className="mb-4 text-center">O que nossos clientes dizem</h2>
+      <p className="text-center">
+        Ver todos <a href="https://discord.gg/nHWCdQXwNF">feedbacks</a>
+      </p>
       <div
         id="feedbackCarousel"
         className="carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">
-          {feedbacks.reduce((result, value, index, array) => {
-            if (index % 2 === 0) {
-              const next = array[index + 1];
-              result.push(
-                <div
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
-                  key={index}
-                >
-                  <div className="d-flex justify-content-center gap-4">
-                    {[value, next].map(
-                      (feedback, i) =>
-                        feedback && (
-                          <div className="col-md-4" key={i}>
-                            <div className="card h-100 shadow-sm text-center">
-                              <div className="card-body">
-                                <img
-                                  src={feedback.imagem}
-                                  alt={feedback.nome}
-                                  className="rounded-circle mb-3"
-                                  width="100"
-                                  height="100"
-                                />
-                                <h5 className="card-title">{feedback.nome}</h5>
-                                <h6 className="card-subtitle mb-2 text-muted">
-                                  {feedback.profissao}
-                                </h6>
-                                <p className="card-text">
-                                  "{feedback.mensagem}"
-                                </p>
-                              </div>
-                              <div className="card-footer text-muted text-end">
-                                ⭐ {feedback.avaliacao}/5
-                              </div>
-                            </div>
-                          </div>
-                        )
-                    )}
+          {feedbacks.map((feedback, index) => (
+            <div
+              key={index}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+            >
+              <div className="row justify-content-center">
+                <div className="col-12 col-md-6 mb-3">
+                  <div className="card h-100 shadow-sm text-center">
+                    <div className="card-body">
+                      <img
+                        src={feedback.imagem}
+                        alt={feedback.nome}
+                        className="rounded-circle mb-3"
+                        width="100"
+                        height="100"
+                      />
+                      <h5 className="card-title">{feedback.nome}</h5>
+                      <h6 className="card-subtitle mb-2 text-muted">
+                        {feedback.profissao}
+                      </h6>
+                      <p className="card-text">"{feedback.mensagem}"</p>
+                    </div>
+                    <div className="card-footer text-muted text-end">
+                      ⭐ {feedback.avaliacao}/5
+                    </div>
                   </div>
                 </div>
-              );
-            }
-            return result;
-          }, [])}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="text-center mt-3">
-          <a href="https://discord.gg/nHWCdQXwNF" target="_blank">
-            Veja mais feedbacks
-          </a>
-        </div>
-        {/* Controles de navegação */}
+
+        {/* Navegação */}
         <button
           className="carousel-control-prev"
           type="button"
           data-bs-target="#feedbackCarousel"
           data-bs-slide="prev"
-          style={{ filter: "invert(2)" }}
         >
           <span
             className="carousel-control-prev-icon"
             aria-hidden="true"
-          ></span>
+            style={{ filter: "invert(2)" }}
+          />
         </button>
         <button
           className="carousel-control-next"
@@ -138,7 +124,7 @@ const FeedbackList = () => {
             className="carousel-control-next-icon"
             aria-hidden="true"
             style={{ filter: "invert(2)" }}
-          ></span>
+          />
         </button>
       </div>
     </div>
