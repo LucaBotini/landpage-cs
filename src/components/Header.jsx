@@ -24,6 +24,12 @@ export default function Header() {
             container: "#wallet_container",
             label: "Pagar com Mercado Pago",
           },
+          customization: {
+            theme: "dark", // ou 'dark'
+            customStyle: {
+              valueProp: "security", // ou 'practicality', 'promo'
+            },
+          },
         });
       };
       document.body.appendChild(script);
@@ -78,11 +84,11 @@ export default function Header() {
               </ul>
               <a
                 className="btn btn-primary ms-lg-3"
-                href="#cta"
+                href="https://discord.gg/wwzFuVp9sY"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Comprar o meu
+                Abrir um ticket
               </a>
             </div>
           </div>
@@ -95,9 +101,20 @@ export default function Header() {
           <Col md={10}>
             <h1 className="display-4 fw-bold">Bem-vindo à Sua Solução</h1>
             <p className="lead">
-              Criamos experiências digitais que geram resultados.
+              <strong className="text-primary">
+                Clique em "Mercado Pago" para realizar a compra.
+              </strong>
             </p>
-            <div id="wallet_container"></div>
+            <div>{/* <h4></h4> */}</div>
+            <div
+              id="wallet_container"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "20px",
+              }}
+            ></div>
           </Col>
         </Row>
       </Container>

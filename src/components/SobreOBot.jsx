@@ -8,8 +8,7 @@ export default function SobreOBot() {
       <Row className="align-items-center">
         <Col md={6}>
           <h1 className="display-5 fw-bold mb-3">
-            Sobre o nosso{" "}
-            <a href="https://teste.com">[BOT] Code Support PREMIUM:</a>
+            Sobre o nosso [BOT] Code Support PREMIUM:
           </h1>
           <p>
             Com o <strong>Code Support PREMIUM</strong>, você leva seu servidor
