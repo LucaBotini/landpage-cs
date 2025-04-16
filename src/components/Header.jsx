@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"; // Importar os hooks necessários
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
-import { Wallet } from "@mercadopago/sdk-react";
 
 export default function Header() {
   useEffect(() => {
@@ -10,10 +9,12 @@ export default function Header() {
       script.src = "https://sdk.mercadopago.com/js/v2";
       script.onload = async () => {
         const mp = new window.MercadoPago(
-          "APP_USR-2e17a37f-e06e-4511-aa5d-11e411b93d50"
+          "APP_USR-2286cfa3-6aeb-4c30-a250-f0a7ad01ee43"
         );
 
-        const res = await fetch("http://localhost:3000/preference");
+        const res = await fetch(
+          "https://0041e220-2138-4e7d-8605-07d5dd0adbea-00-1elg98rf5o0gr.riker.replit.dev/preference"
+        );
         const data = await res.json();
 
         mp.checkout({

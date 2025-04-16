@@ -1,19 +1,20 @@
 import React from "react";
-import "./App.css";
-import Header from "./components/Header";
-import SobreOBot from "./components/SobreOBot";
-import Footer from "./components/Footer";
-import FeedbackList from "./components/FeedbackList";
-import { Wallet } from "@mercadopago/sdk-react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import PaySuccess from "./pages/PaySuccess.jsx";
+import PayFail from "./pages/PayFail.jsx";
+import PayLoading from "./pages/PayLoading.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <SobreOBot />
-      <FeedbackList />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sucess" element={<PaySuccess />} />
+        <Route path="/fail" element={<PayFail />} />
+        <Route path="/loading" element={<PayLoading />} />
+      </Routes>
+    </Router>
   );
 }
 
