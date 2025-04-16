@@ -13,7 +13,7 @@ export default function Header() {
         );
 
         const res = await fetch(
-          "https://0041e220-2138-4e7d-8605-07d5dd0adbea-00-1elg98rf5o0gr.riker.replit.dev/preference"
+          "https://backend-cs-hapf.onrender.com/preference"
         );
         const data = await res.json();
 
